@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loan Data</title>
+</head>
+<body>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Loan ID</th>
+                <th>Applicant Income</th>
+                <th>Co-Applicant Income</th>
+                <th>Loan Amount</th>
+                <th>Loan Amount Term</th>
+                <th>Credit History</th>
+                <th>Gender</th>
+                <th>Marital Status</th>
+                <th>Education Level</th>
+                <th>No of Dependents</th>
+                <th>Self Employment</th>
+                <th>Property Area</th>
+                <th>Loan Status</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for row in data %}
+            <tr>
+                <td>{{ row['Loan ID'] }}</td>
+                <td>{{ row['Applicant Income'] }}</td>
+                <td>{{ row['Co-Applicant Income'] }}</td>
+                <td>{{ row['Loan Amount'] }}</td>
+                <td>{{ row['Loan Amount Term'] }}</td>
+                <td>{{ row['Credit History'] }}</td>
+                <td>{{ row['Gender'] }}</td>
+                <td>{{ row['Marital Status'] }}</td>
+                <td>{{ row['Education Level'] }}</td>
+                <td>{{ row['No of Dependents'] }}</td>
+                <td>{{ row['Self Employment'] }}</td>
+                <td>{{ row['Property Area'] }}</td>
+                <td>{{ row['Loan Status'] }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>
